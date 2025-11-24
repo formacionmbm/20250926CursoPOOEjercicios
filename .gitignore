@@ -1,0 +1,94 @@
+##############################
+# Compilación de Java
+##############################
+*.class
+*.war
+*.ear
+*.jar
+*.zip
+*.tar.gz
+*.log
+
+# Directorios de compilación
+bin/
+out/
+target/
+build/
+classes/
+
+##############################
+# IntelliJ IDEA
+##############################
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# Cache y configuración que no debe subirse
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/**/usage.statistics.xml
+.idea/**/dictionaries
+.idea/**/shelf
+.idea/**/libraries
+.idea/**/modules.xml
+
+# Plugins que generan archivos
+.idea/**/aws.xml
+.idea/**/gradle.xml
+.idea/**/misc.xml
+
+# Archivos generados por el sistema
+*.tmp
+*.swp
+
+##############################
+# Eclipse
+##############################
+.project
+.classpath
+.settings/
+.loadpath
+.recommenders/
+
+# Carpetas generadas
+.target/
+.metadata/
+
+##############################
+# Maven
+##############################
+# Directorio de dependencias descargadas
+.mvn/
+!/.mvn/wrapper/maven-wrapper.jar
+mvnw
+mvnw.cmd
+
+##############################
+# Gradle
+##############################
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+
+##############################
+# Sistemas Operativos
+##############################
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+*.bat
+*.exe
+
+##############################
+# Logs
+##############################
+*.log
+
+##############################
+# Otros
+##############################
+*.env
+*.local
