@@ -12,7 +12,7 @@ public class TestCalculadora {
 		Integer numero3 =  1222;
 		Integer numero4 = 2;
 		 
-		System.out.println();
+		
 		//Invocamos a los m�todos est�ticos de la calculadora
 		
 		

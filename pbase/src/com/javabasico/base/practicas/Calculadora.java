@@ -1,6 +1,9 @@
 package com.javabasico.base.practicas;
 
 import static com.javabasico.base.practicas.Constantes.SUMA;
+import static com.javabasico.base.practicas.Constantes.RESTA;
+import static com.javabasico.base.practicas.Constantes.MULTIPLICACION;
+import static com.javabasico.base.practicas.Constantes.DIVISION;
 /**
  * Calculadora, se realizan las operaciones b�sicas mediante metodos est�ticos
  * @author MARIA
@@ -26,7 +29,7 @@ public class Calculadora {
 	 */
 	public static void resta(int operando1,int operando2) {
 		int resta = operando1-operando2;
-		System.out.println("RESTA:"+resta);
+		System.out.println(RESTA+resta);
 	}
 
 	/**
@@ -36,7 +39,7 @@ public class Calculadora {
 	 */
 	public static void multiplicacion(int operando1,int operando2) {
 		long multiplicacion = operando1*operando2;
-		System.out.println("MULTIPLICACION"+multiplicacion);
+		System.out.println(MULTIPLICACION+multiplicacion);
 	}
 
 	/**
@@ -46,12 +49,16 @@ public class Calculadora {
 	 */
 	public static void division(int operando1,int operando2) {
 		double division = operando1/operando2;
-		System.out.println("DIVISION"+division);
+		System.out.println(DIVISION+division);
 	}
 	//A�adir un m�todo no est�tico que realize la suma
 	//NO SE SUELE HACER UNA SOBRECARGA DE METODOS ENTRE ESTATICOS Y NO EST�TICOS
 	
-	
+	public void suma(long operando1,int operando2) {
+		long suma = operando1+operando2;
+		//Aqui ni siquiera indicamos la clase porque tenemos importada la constante
+		System.out.println(SUMA+suma);
+	}
 	
 
 }
