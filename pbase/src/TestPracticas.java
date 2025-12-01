@@ -1,11 +1,11 @@
 import com.javabasico.base.practicas.Casa;
 
-//Paso1: Incluir el Javadoc de esta clase y sus métodos. Lo más completo posible
+//Paso1: Incluir el Javadoc de esta clase y sus mï¿½todos. Lo mï¿½s completo posible
 public class TestPracticas {
 	//Paso2:  Inicializar una variable tipo Casa de 3 habitaciones y 2 planta.
 	//Paso3:  Declarar variables numHabitaciones y planta de tipo entero
-	//Paso4:  Crear un método main.  Dentro del main del paso 5 al final
-	
+	//Paso4:  Crear un mï¿½todo main.  Dentro del main del paso 5 al final
+	 
 	
 	//Paso5:  Inicializar la variable testPracticas del tipo de esta clase
 	//Paso6:  Mostrar por consola el objeto casa de testPracticas
