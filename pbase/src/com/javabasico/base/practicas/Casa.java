@@ -4,8 +4,8 @@ package com.javabasico.base.practicas;
 public class Casa {
 	//Paso1: Inicializamos las variables de entero: numHabitaciones y planta por defecto a 0
 	
-	private int numHabitaciones=0;
-	private int planta=0;
+	private int numHabitaciones;
+	private int planta;
 	
 	//Paso2:  Declaramos una cadena de acceso publica llamada dirección
 	
