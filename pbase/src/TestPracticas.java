@@ -3,12 +3,24 @@ import com.javabasico.base.practicas.Casa;
 //Paso1: Incluir el Javadoc de esta clase y sus m�todos. Lo m�s completo posible
 public class TestPracticas {
 	//Paso2:  Inicializar una variable tipo Casa de 3 habitaciones y 2 planta.
+	/** Creo un nuevo objeto de tipo casa con el constructor que tiene 2 parametros de de numHabitaciones y plantas **/
+	Casa casa = new Casa(3, 2);
+	
 	//Paso3:  Declarar variables numHabitaciones y planta de tipo entero
+	private int numHabitaciones;
+	private int planta;
+	
 	//Paso4:  Crear un m�todo main.  Dentro del main del paso 5 al final
-	 
+	 public static void main(String[] args) {
+		 /** Inicializar la variable testPracticas del tipo de esta clase **/
+		TestPracticas testPracticas=new TestPracticas();
+		
+	}
 	
 	//Paso5:  Inicializar la variable testPracticas del tipo de esta clase
 	//Paso6:  Mostrar por consola el objeto casa de testPracticas
+
+	 
 	//Paso7:  Inicializar las variables nHab y pl con valor 2 y 1 respectivamente
 	//Paso8:  Crear un objeto casa "casa" con el valor de las variables locales de metodo
 	//Paso9:  Crear un objeto casa "casa2" con el valor de las variables locales de clase

@@ -6,7 +6,7 @@ public class Perfil implements Serializable{
 	private static final long serialVersionUID = 1L;
 	
 	// Construir un Bean Perfil, que tenga como atributos  el identificador  y el nombre
-	private long id;
+	private int id;
 	private String nombre;
 	
 	
@@ -19,7 +19,7 @@ public class Perfil implements Serializable{
 	public long getId() {
 		return id;
 	}
-	public void setId(long id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 	
