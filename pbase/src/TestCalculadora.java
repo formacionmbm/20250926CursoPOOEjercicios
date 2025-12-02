@@ -4,33 +4,39 @@ public class TestCalculadora {
 
 	public static void main(String[] args) {
 
-		//NO SE SUELE HACER UNA SOBRECARGA DE METODOS ENTRE ESTATICOS Y NO ESTÁTICOS
+		//NO SE SUELE HACER UNA SOBRECARGA DE METODOS ENTRE ESTATICOS Y NO ESTATICOS
 		
 		//Inicializamos dos variables de tipo entero:numero1 y numero2
 		
 		
+		int numero1 =  25;
+		int numero2 = 5;
 		Integer numero3 =  1222;
 		Integer numero4 = 2;
 		
-		//Invocamos a los métodos estáticos de la calculadora
+		//Invocamos a los metodos estaticos de la calculadora
+		Calculadora.suma(numero1, numero2);
+		Calculadora.resta(numero1, numero2);
+		Calculadora.multiplicacion(numero1, numero2);
+		Calculadora.division(numero1, numero2);
 		
+		//Invocar al  metodo no estatico para que realice la suma de lo  numeros
+		//Nota:El mas ajustado a los datos int es el metodo estatico
+		//Nota:El mas ajustado a los datos Integer es el metodo NO estatico		
+		Calculadora calculadora = new Calculadora();
+		calculadora.suma2(numero3, numero4);
 		
-		//Invocar al método no estático para que realice la suma de lo  números
-		//Nota:El más ajustado a los datos int es el método estático
-		//Nota:El más ajustado a los datos Integer es el método NO estático		
-		
-		
-		//Nota:UNBOXING convierte  los Integer a int y asi puede utilizar el método
+		//Nota:UNBOXING convierte  los Integer a int y asi puede utilizar el metodo
 		
 		
 				
 		/* Nota:
-		 *  La siguiente invocacion da error de compilación,
-		 *  porque no sabe cual de los dos métodos coger.
+		 *  La siguiente invocacion da error de compilaciï¿½n,
+		 *  porque no sabe cual de los dos mï¿½todos coger.
 		 *  numero1 es de tipo int
 		 *  numero4 es de tipo Integer
 		 */
-		//calculadora.suma(numero1,numero4);
+		calculadora.suma(numero1,numero4);
 	}
 
 }
