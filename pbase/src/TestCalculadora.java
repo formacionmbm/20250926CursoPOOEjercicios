@@ -8,18 +8,25 @@ public class TestCalculadora {
 		
 		//Inicializamos dos variables de tipo entero:numero1 y numero2
 		
+		int numero1 = 10;
+		int numero2 = 20;
 		
 		Integer numero3 =  1222;
 		Integer numero4 = 2;
 		 
 		
 		//Invocamos a los m�todos est�ticos de la calculadora
-		
+		Calculadora calculadora = new Calculadora();
+		calculadora.suma(numero1, numero2);
+		calculadora.resta(numero1, numero2);
+		calculadora.multiplicacion(numero1, numero2);
+		calculadora.division(numero1, numero2);
 		
 		//Invocar al m�todo no est�tico para que realice la suma de lo  n�meros
 		//Nota:El m�s ajustado a los datos int es el m�todo est�tico
 		//Nota:El m�s ajustado a los datos Integer es el m�todo NO est�tico		
-		
+		calculadora.suma(numero1, numero2);
+		calculadora.suma(numero3, numero4);
 		
 		//Nota:UNBOXING convierte  los Integer a int y asi puede utilizar el m�todo
 		
@@ -32,6 +39,7 @@ public class TestCalculadora {
 		 *  numero4 es de tipo Integer
 		 */
 		//calculadora.suma(numero1,numero4);
+		
 	}
 
 }

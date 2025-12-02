@@ -54,8 +54,8 @@ public class Calculadora {
 	//A�adir un m�todo no est�tico que realize la suma
 	//NO SE SUELE HACER UNA SOBRECARGA DE METODOS ENTRE ESTATICOS Y NO EST�TICOS
 	
-	public void suma(long operando1,int operando2) {
-		long suma = operando1+operando2;
+	public void suma(Integer operando1,Integer operando2) {
+		Integer suma = operando1+operando2;
 		//Aqui ni siquiera indicamos la clase porque tenemos importada la constante
 		System.out.println(SUMA+suma);
 	}
