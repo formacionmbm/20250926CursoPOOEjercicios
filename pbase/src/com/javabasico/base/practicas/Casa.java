@@ -1,23 +1,34 @@
 package com.javabasico.base.practicas;
 
 
-public class Casa {
-	//Paso1: Inicializamos las variables de entero: numHabitaciones y planta por defecto a 0
+public class Casa { //clase por defecto
 	
-	//Paso2:  Declaramos una cadena de acceso publica llamada dirección
+	//Paso1: Inicializamos las variables de entero: numHabitaciones y planta por defecto a 0.
+	private int numHabitaciones = 0; //private porque estÃ¡n los atributos(datos), tipo entero (int) y se inicializa en 0
+	private int planta = 0; //private porque estÃ¡n los atributos(datos), tipo entero (int) y se inicializa en 0
 	
-	//Paso3:  Declaramos y asignamos un objeto privado float para los m2, le damos un valor
-	// por defecto
+	//Paso2:  Declaramos una cadena de acceso publica llamada direcciÃ³n.
+	public String direccion = "Sin direccion"; //mÃ©todo pÃºblico, tipo cadena (String)
 	
-	//Paso4:  Declaramos un constructor privado por defecto
+	//Paso3:  Declaramos y asignamos un objeto privado float para los m2, le damos un valor por defecto.
+	private Float m2 = 100f; //tipo float (decimal)
 	
-	//Paso5:  Declaramos un constructor publico con los atributos de tipo primitivo
+	//Paso4:  Declaramos un constructor privado por defecto.
+	private Casa() {  //private no se invoca fuera de la clase, () por ser por defecto y sin parÃ¡metros
+		
+	}
+	
+	//Paso5:  Declaramos un constructor publico con los atributos de tipo primitivo.
+	public Casa () {
+	     int numHabitaciones = 0;
+		 int planta = 0;
+	}
 	
 	//Paso6:  Declarmos un constructor con todos los tipos numericos
 	
 	//Paso7:  Declaramos un constructor protegido con los datos de cadena
 	
-	//Paso8:  Declararemos los métodos de acceso que sean necesarios para los atributos
+	//Paso8:  Declararemos los mï¿½todos de acceso que sean necesarios para los atributos
 	
 	
 	//Paso9:  Declaramos un metodo init sin parametros que invoque al constructor privado
@@ -29,11 +40,11 @@ public class Casa {
 	
 	
 	//Paso11:  Declaramos un metodo modificar que modifique todos los atributos del objeto
-	// pasándole como parámetro únicamente otro objeto Casa
+	// pasï¿½ndole como parï¿½metro ï¿½nicamente otro objeto Casa
 	
 	
 	
 	
-	//Paso12:  Sobreescribir el método toString para que se muestren los atributos de esta clase
+	//Paso12:  Sobreescribir el mï¿½todo toString para que se muestren los atributos de esta clase
 	
 }

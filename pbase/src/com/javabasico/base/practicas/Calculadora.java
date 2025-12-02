@@ -2,54 +2,77 @@ package com.javabasico.base.practicas;
 
 import static com.javabasico.base.practicas.Constantes.SUMA;
 /**
- * Calculadora, se realizan las operaciones básicas mediante metodos estáticos
+ * Calculadora, se realizan las operaciones  bï¿½sicas mediante metodos estï¿½ticos
  * @author MARIA
- *
  */
 public class Calculadora {
-	//Añadir las constantes para que no existan cadenas en los sysos
-	/**
-	 * Suma
-	 * @param operando1
-	 * @param operando2
-	 */
+	
+	//Aï¿½adir las constantes para que no existan cadenas en los sysos
+	//Se declaran como public static final String
+	public class Mensajes {
+    public static final String INGRESAR_NUM1 = "Ingrese el primer nÃºmero:";
+    public static final String INGRESAR_NUM2 = "Ingrese el segundo nÃºmero:";
+    public static final String INGRESAR_OPERADOR = "Ingrese el operador (+, -, *, /):";
+    
+    /*tambiÃ©n se pueden utilizar constantes de operadores
+    public static final String SUMA = "+";
+    public static final String RESTA = "-";
+    public static final String MULTIPLICACION = "*";
+    public static final String DIVISION = "/"; */
+    
+    public static final String ERROR_DIVISION = "Error: divisiÃ³n por cero";
+    public static final String ERROR_OPERADOR = "Operador no vÃ¡lido";
+    public static final String RESULTADO = "Resultado: ";
+}
+	
+	 /*Suma
+	 @param operando1
+	 @param operando2 */
+	 
 	public static void suma(int operando1,int operando2) {
 		int suma = operando1+operando2;
 		//Aqui ni siquiera indicamos la clase porque tenemos importada la constante
 		System.out.println(SUMA+suma);
 	}
-
-	/**
-	 * Resta
+	
+	/* Resta
 	 * @param operando1
-	 * @param operando2
-	 */
+	 * @param operando2 */
+	 
 	public static void resta(int operando1,int operando2) {
 		int resta = operando1-operando2;
 		System.out.println("RESTA:"+resta);
 	}
-
-	/**
-	 * Multiplicacion
-	 * @param operando1
-	 * @param operando2
-	 */
+	
+	
+	 /* Multiplicacion
+	  @param operando1
+	  @param operando2 */
+	 
 	public static void multiplicacion(int operando1,int operando2) {
 		long multiplicacion = operando1*operando2;
 		System.out.println("MULTIPLICACION"+multiplicacion);
 	}
 
-	/**
-	 * Division
-	 * @param operando1
-	 * @param operando2
-	 */
+	 /*Division
+	  @param operando1
+	  @param operando2 */
+	
 	public static void division(int operando1,int operando2) {
 		double division = operando1/operando2;
 		System.out.println("DIVISION"+division);
+		
 	}
-	//Añadir un método no estático que realize la suma
-	//NO SE SUELE HACER UNA SOBRECARGA DE METODOS ENTRE ESTATICOS Y NO ESTÁTICOS
+	
+	//Aï¿½adir un mï¿½todo no estï¿½tico que realice la suma.
+	
+	//Quitamos el mÃ©todo estÃ¡tico, cambiamos el tipo de int a long (de uno o de todos)
+	public void suma(long operando1, long operando2) {
+		long suma = operando1+operando2;
+		System.out.println(SUMA+suma);
+	}
+	
+	//NO SE SUELE HACER UNA SOBRECARGA DE METODOS ENTRE ESTATICOS Y NO ESTï¿½TICOS
 	
 	
 	
