@@ -5,9 +5,11 @@ public class TestCasa {
 	public static void main(String[] args) {
 		
 		//Invocamos al constructor Casa(int numHabitaciones, int planta,Float m2);
+		Casa casa1= new Casa(5, 3, 100.0f);
+		casa1.direccion="Calle del sol, 10";
 		
 		//Mostramos por consola la casa
-		
+		System.out.println(casa1);
 		// En esta clase, no tenemos acceso al constructor Casa(String direccion);
 		//porque no somos hermanas ni hay herencia entre nosotras
 
@@ -19,8 +21,8 @@ public class TestCasa {
 		
 		//Mostramos por consola las casas
 		
-		//¿Que mostrará primeraCasa==segundaCasa? y ¿porqué?
-		//¿Que mostrará primeraCasa.equals(segundaCasa)? y ¿porqué?
+		//ï¿½Que mostrarï¿½ primeraCasa==segundaCasa? y ï¿½porquï¿½?
+		//ï¿½Que mostrarï¿½ primeraCasa.equals(segundaCasa)? y ï¿½porquï¿½?
 		
 		
 		
