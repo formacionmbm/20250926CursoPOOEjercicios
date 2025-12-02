@@ -38,7 +38,6 @@ public class GesPerfil {
 	}
 
 	public void deleteById(int id) {
-		List<Perfil> listaAux = this.t_perfil;
 		int posicion = -1;
 		for (Perfil perfil : this.t_perfil) {
 			if (perfil.getId() == id) {

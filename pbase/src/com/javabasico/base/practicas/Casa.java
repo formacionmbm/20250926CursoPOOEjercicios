@@ -12,7 +12,7 @@ public class Casa {
 	// Paso3: Declaramos y asignamos un objeto privado float para los m2, le damos
 	// un valor
 	// por defecto
-	private Float m2 = 100.00f;
+	private Float m2 = 80.50f;
 
 	// Paso4: Declaramos un constructor privado por defecto
 	private Casa() {
@@ -92,6 +92,7 @@ public class Casa {
 
 	// Paso12: Sobreescribir el m�todo toString para que se muestren los atributos
 	// de esta clase
+	@Override
 	public String toString() {
 		return "numHabitaciones = " + numHabitaciones + ", planta = " + planta + ", direccion = "
 				+ String.valueOf(direccion) + ", m2 = " + String.valueOf(m2);

@@ -3,6 +3,7 @@ package com.javabasico.base.practicas;
 import java.io.Serializable;
 
 public class Perfil implements Serializable{
+
 	private static final long serialVersionUID = 1L;
 	
 	// Construir un Bean Perfil, que tenga como atributos  el identificador  y el nombre
@@ -31,7 +32,10 @@ public class Perfil implements Serializable{
 	}
 	
 	
-	
+	@Override
+	public String toString() {
+		return "Perfil [id=" + id + ", nombre=" + nombre + "]";
+	}
 	
 	
 	
