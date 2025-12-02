@@ -72,8 +72,7 @@ public class Casa {
 	// y retorne una instancia de objeto
 	
 	public static Casa init() {
-		Casa privateCasa = new Casa();
-		return privateCasa;
+		return new Casa();
 	}
 	
 	//Paso10:  Declaramos un metodo modificar que modifique todos los atributos del objeto
