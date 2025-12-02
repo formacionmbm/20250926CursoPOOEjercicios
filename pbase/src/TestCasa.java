@@ -28,8 +28,6 @@ public class TestCasa {
 		System.out.println("CASA 3 - " + casa3.toString());
 		
 		
-		
-		
 		//¿Que mostrara primeraCasa==segundaCasa? y ¿por que?
 		System.out.println(casa1==casa3);
 		//es falso porque son referencias de memoria diferentes
@@ -38,9 +36,6 @@ public class TestCasa {
 		
 		//¿Que mostrara primeraCasa.equals(segundaCasa)? y ¿por que?
 		System.out.println(casa1.equals(casa3));
-		
-		
-		
 		
 		
 		
