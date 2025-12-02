@@ -43,17 +43,38 @@ public class Casa {
 	
 	//Paso8:  Declararemos los m�todos de acceso que sean necesarios para los atributos
 	
+	
 	public Float getM2() {
 		return m2;
+	}
+
+	public int getNumHabitaciones() {
+		return numHabitaciones;
+	}
+
+	public void setNumHabitaciones(int numHabitaciones) {
+		this.numHabitaciones = numHabitaciones;
+	}
+
+	public int getPlanta() {
+		return planta;
+	}
+
+	public void setPlanta(int planta) {
+		this.planta = planta;
 	}
 
 	public void setM2(Float m2) {
 		this.m2 = m2;
 	}	
 	
-	//Paso9:  Declaramos un metodo int sin parametros que invoque al constructor privado
+	//Paso9:  Declaramos un metodo init sin parametros que invoque al constructor privado
 	// y retorne una instancia de objeto
 	
+	public static Casa init() {
+		Casa privateCasa = new Casa();
+		return privateCasa;
+	}
 	
 	//Paso10:  Declaramos un metodo modificar que modifique todos los atributos del objeto
 	
@@ -80,9 +101,9 @@ public class Casa {
 	@Override
     public String toString() {
         System.out.println(this.numHabitaciones);
-        System.out.println(this.numHabitaciones);
-        System.out.println(this.numHabitaciones);
-        System.out.println(this.numHabitaciones);
+        System.out.println(this.planta);
+        System.out.println(this.direccion);
+        System.out.println(this.m2);
         return "Esos son los atributos";
     }
 }
