@@ -4,7 +4,9 @@ package com.javabasico.base.practicas;
 public class Casa {
 	//Paso1: Inicializamos las variables de entero: numHabitaciones y planta por defecto a 0
 	
-	//Paso2:  Declaramos una cadena de acceso publica llamada dirección
+	
+	
+	//Paso2:  Declaramos una cadena de acceso publica llamada direcciï¿½n
 	
 	//Paso3:  Declaramos y asignamos un objeto privado float para los m2, le damos un valor
 	// por defecto
@@ -17,7 +19,7 @@ public class Casa {
 	
 	//Paso7:  Declaramos un constructor protegido con los datos de cadena
 	
-	//Paso8:  Declararemos los métodos de acceso que sean necesarios para los atributos
+	//Paso8:  Declararemos los mï¿½todos de acceso que sean necesarios para los atributos
 	
 	
 	//Paso9:  Declaramos un metodo init sin parametros que invoque al constructor privado
@@ -29,11 +31,11 @@ public class Casa {
 	
 	
 	//Paso11:  Declaramos un metodo modificar que modifique todos los atributos del objeto
-	// pasándole como parámetro únicamente otro objeto Casa
+	// pasï¿½ndole como parï¿½metro ï¿½nicamente otro objeto Casa
 	
 	
 	
 	
-	//Paso12:  Sobreescribir el método toString para que se muestren los atributos de esta clase
+	//Paso12:  Sobreescribir el mï¿½todo toString para que se muestren los atributos de esta clase
 	
 }

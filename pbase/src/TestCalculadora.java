@@ -1,10 +1,12 @@
+
 import com.javabasico.base.practicas.Calculadora;
+
 
 public class TestCalculadora {
 
 	public static void main(String[] args) {
 
-		//NO SE SUELE HACER UNA SOBRECARGA DE METODOS ENTRE ESTATICOS Y NO ESTÁTICOS
+		//NO SE SUELE HACER UNA SOBRECARGA DE METODOS ENTRE ESTATICOS Y NO ESTï¿½TICOS
 		
 		//Inicializamos dos variables de tipo entero:numero1 y numero2
 		
@@ -12,21 +14,32 @@ public class TestCalculadora {
 		Integer numero3 =  1222;
 		Integer numero4 = 2;
 		
-		//Invocamos a los métodos estáticos de la calculadora
+		//Invocamos a los mï¿½todos estï¿½ticos de la calculadora
+		
+		Calculadora.suma(numero3, numero4);
+		Calculadora.resta(numero3, numero4);
+		Calculadora.multiplicacion(numero3, numero4);
+		Calculadora.division(numero3, numero4);
 		
 		
-		//Invocar al método no estático para que realice la suma de lo  números
-		//Nota:El más ajustado a los datos int es el método estático
-		//Nota:El más ajustado a los datos Integer es el método NO estático		
+		//Invocar al mï¿½todo no estï¿½tico para que realice la suma de lo  nï¿½meros
+		
+		Calculadora calc = new Calculadora(); 
+		calc.suma1(numero3, numero4);
+		
+	
+		//Nota:El mï¿½s ajustado a los datos int es el mï¿½todo estï¿½tico
+			
+		//Nota:El mï¿½s ajustado a los datos Integer es el mï¿½todo NO estï¿½tico		
 		
 		
-		//Nota:UNBOXING convierte  los Integer a int y asi puede utilizar el método
+		//Nota:UNBOXING convierte  los Integer a int y asi puede utilizar el mï¿½todo
 		
 		
 				
 		/* Nota:
-		 *  La siguiente invocacion da error de compilación,
-		 *  porque no sabe cual de los dos métodos coger.
+		 *  La siguiente invocacion da error de compilaciï¿½n,
+		 *  porque no sabe cual de los dos mï¿½todos coger.
 		 *  numero1 es de tipo int
 		 *  numero4 es de tipo Integer
 		 */
