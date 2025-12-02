@@ -14,18 +14,16 @@ public class Casa {
 	//Paso3:  Declaramos y asignamos un objeto privado float para los m2, le damos un valor
 	// por defecto
 	
-	private float m2= 0f;
+	private Float m2 = 100f;
 
 	
 	//Paso4:  Declaramos un constructor privado por defecto
-	private Casa() {	
-	}
+	private Casa() {}
 	
 	//Paso5:  Declaramos un constructor público con los atributos de tipo primitivo
-	public Casa(int numHabitaciones, int planta, float m2) {
+	public Casa(int numHabitaciones, int planta) {
 		this.numHabitaciones = numHabitaciones;
 		this.planta = planta;
-		this.m2=m2;
 	}
 	
 	//Paso6:  Declarmos un constructor con todos los tipos numericos
@@ -69,7 +67,7 @@ public class Casa {
 	
 	//Paso9:  Declaramos un metodo init sin parametros que invoque al constructor privado
 	// y retorne una instancia de objeto
-	public static Casa init() {
+	public Casa init() {
 		return new Casa();
 	}
 
@@ -85,19 +83,22 @@ public class Casa {
 	//Paso11:  Declaramos un metodo modificar que modifique todos los atributos del objeto
 	// pasándole como parámetro  únicamente otro objeto Casa
 	
-	public void modificar(Casa otraCasa) {
-		this.numHabitaciones = otraCasa.numHabitaciones;
-		this.planta = otraCasa.planta;
-		this.direccion = otraCasa.direccion;
-		this.m2 = otraCasa.m2;
+	public void modificar(Casa Casa) {
+		this.numHabitaciones = Casa.numHabitaciones;
+		this.planta = Casa.planta;
+		this.direccion = Casa.direccion;
+		this.m2 = Casa.m2;
 	}
+
 	
 	
 	//Paso12:  Sobreescribir el método toString para que se muestren los atributos de esta clase
 	
 	@Override
 	public String toString() {
-		return "Casa [" + "numHabitaciones=" + numHabitaciones + ", planta=" + planta + ", direccion='" + direccion + '\'' + ", m2=" + m2 + "]";
+		return "Casa [numHabitaciones=" + numHabitaciones + ", planta=" + planta + ", direccion=" + direccion + ", m2="
+				+ m2 + "]";
 	}
+	
 	
 }
