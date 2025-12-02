@@ -94,15 +94,12 @@ public class Casa {
 		this.m2 = otraCasa.m2;
 	}
 	
-	
 	//Paso12:  Sobreescribir el m�todo toString para que se muestren los atributos de esta clase
 	
 	@Override
-    public String toString() {
-        System.out.println(this.numHabitaciones);
-        System.out.println(this.planta);
-        System.out.println(this.direccion);
-        System.out.println(this.m2);
-        return "Esos son los atributos";
-    }
+	public String toString() {
+		return "Casa [numHabitaciones=" + numHabitaciones + ", planta=" + planta + ", direccion=" + direccion + ", m2="
+				+ m2 + "]";
+	}
+	
 }
