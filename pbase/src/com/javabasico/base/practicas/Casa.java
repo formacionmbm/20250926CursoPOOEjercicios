@@ -32,7 +32,11 @@ public class Casa {
 
     //Paso6:  Declarmos un constructor con todos los tipos numericos
 
-    //Es lo mismo de arriba
+    public Casa(int planta, int numHabitaciones) {
+        this.planta = planta;
+        this.numHabitaciones = numHabitaciones;
+
+    }
 	
 	//Paso7:  Declaramos un constructor protegido con los datos de cadena
 
