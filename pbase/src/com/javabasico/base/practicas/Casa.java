@@ -11,7 +11,7 @@ public class Casa {
 	
 	//Paso3:  Declaramos y asignamos un objeto privado float para los m2, le damos un valor
 	// por defecto
-	private Float m2 = (float) 0.00;
+	private Float m2 = 100.00f;
 	
 	//Paso4:  Declaramos un constructor privado por defecto
 	private Casa() {
@@ -22,7 +22,7 @@ public class Casa {
 		this.numHabitaciones=numHabitaciones;
 		this.planta=planta;
 	}
-	
+
 	//Paso6:  Declarmos un constructor con todos los tipos numericos
 	public Casa(int numHabitaciones,int planta,Float m2) {
 		this.numHabitaciones=numHabitaciones;
@@ -67,22 +67,21 @@ public class Casa {
 	}
 	
 	//Paso10:  Declaramos un metodo modificar que modifique todos los atributos del objeto
-	public void modificar() {
-		Casa casa = new Casa();
-		casa.numHabitaciones = 3;
-		casa.planta = 1;
-		casa.direccion = "Calle cierta 456";
-		casa.m2 = (float) 83.15;
+	public void modificar(int numHabitaciones,int planta,Float m2, String direccion) {
+		this.numHabitaciones=numHabitaciones;
+		this.planta=planta;
+		this.m2=m2;
+		this.direccion=direccion;
 	}
 	
 	
 	//Paso11:  Declaramos un metodo modificar que modifique todos los atributos del objeto
 	// pas�ndole como par�metro �nicamente otro objeto Casa
 	public void modificar(Casa casa) {
-		casa.numHabitaciones = 2;
-		casa.planta = 5;
-		casa.direccion = "Calle falsa 123";
-		casa.m2 = (float) 60.15;
+		this.numHabitaciones=casa.numHabitaciones;
+		this.planta=casa.planta;
+		this.m2=casa.m2;
+		this.direccion=casa.direccion;
 	}
 	
 	
