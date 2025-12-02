@@ -109,7 +109,7 @@ public class Casa {
 				+ "\n  - Nùmero de habitaciones: " + this.getNumHabitaciones()
 				+ "\n  - Planta: " + this.getPlanta()
 				+ "\n  - Direccion: " + this.direccion
-				+ "\n  - Metros Cuadrados: " + this.getM2();
+				+ "\n  - Metros Cuadrados: " + this.getM2() + "\n";
 	}
 	
 }

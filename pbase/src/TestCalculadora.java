@@ -36,7 +36,7 @@ public class TestCalculadora {
 		 *  numero1 es de tipo int
 		 *  numero4 es de tipo Integer
 		 */
-		calculadora.suma(numero1,numero4);
+		calculadora.suma2(numero1,numero4);
 	}
 
 }
