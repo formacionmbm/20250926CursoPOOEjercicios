@@ -19,8 +19,8 @@ public class TestCasa {
 		
 		//Mostramos por consola las casas
 		
-		//¿Que mostrará primeraCasa==segundaCasa? y ¿porqué?
-		//¿Que mostrará primeraCasa.equals(segundaCasa)? y ¿porqué?
+		//ï¿½Que mostrarï¿½ primeraCasa==segundaCasa? y ï¿½porquï¿½?
+		//ï¿½Que mostrarï¿½ primeraCasa.equals(segundaCasa)? y ï¿½porquï¿½?
 		
 		
 		

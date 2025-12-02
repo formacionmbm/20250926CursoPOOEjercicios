@@ -50,6 +50,13 @@ public class Calculadora {
 		System.out.println(DIVISION+division);
 	}
 	//A�adir un m�todo no est�tico que realize la suma
+
+   public void suma(Integer operando1,Integer operando2) {
+        Integer suma = operando1+operando2;
+        System.out.println(SUMA+suma);
+    }
+
+
 	//NO SE SUELE HACER UNA SOBRECARGA DE METODOS ENTRE ESTATICOS Y NO EST�TICOS
 	
 	
