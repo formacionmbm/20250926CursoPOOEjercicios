@@ -16,11 +16,11 @@ public class Ejercicio04 {
 		Scanner sc=new Scanner(System.in);
 		List<Integer> lista=generarLista();
 		System.out.println("Introducir un entero:");
-		int indice//recoger un entero;
-		//Eliminación por indice. El tipo es int
+		int indice;//recoger un entero;
+		//Eliminaciï¿½n por indice. El tipo es int
 		
-		Integer numero //cambiarlo a integer;
-		//Eliminación por numero. El tipo es Integer
+		Integer numero; //cambiarlo a integer;
+		//Eliminaciï¿½n por numero. El tipo es Integer
 		
 		
 		
