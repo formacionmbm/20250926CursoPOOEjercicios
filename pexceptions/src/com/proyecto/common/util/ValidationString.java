@@ -36,11 +36,11 @@ public class ValidationString {
 				
 			} catch (StringNotValidException snve) {
 				
-				System.out.println("Error de validacion de cadena: " + snve.getMessage());
+				throw snve;
 				
 			} catch (Exception e) {
 				
-				System.out.println("Error general: " + e.getMessage());
+				throw e;
 				
 			}
 			
