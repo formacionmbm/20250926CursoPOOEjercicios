@@ -1,13 +1,20 @@
 package com.proyecto.common.exception;
 
+import com.proyecto.common.Constantes;
+
 //Paso 1. Identificar esta clase commo hija de StringNotValidException
-public class StringTooShortException {
+public class StringTooShortException extends StringNotValidException {
 
 	// Paso 2. Indicar un atributo inmutable tipo int llamado "tamanyo"
-
+    private final int tamanyo = Constantes.TAMANIO_MIN;
 	// Paso 3. Implementar el constructor adecuado para asignar valor a todos
 	// los atributos de esta clase incluidos los heredados
-
+    public StringTooShortException(String code, String message) {
+        super(code, message);
+    }
 	// Paso 4. Implementar un metodo para conseguir el valor del atributo "tamanyo"
 
+    public int getTamanyo() {
+        return tamanyo;
+    }
 }

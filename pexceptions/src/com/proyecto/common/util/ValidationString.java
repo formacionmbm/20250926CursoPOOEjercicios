@@ -4,36 +4,58 @@ import java.util.Arrays;
 
 import com.proyecto.common.Constantes;
 import com.proyecto.common.NotAllowedWord;
-import com.proyecto.common.exception.CodeErrors;
-import com.proyecto.common.exception.NotAllowedWordsException;
-import com.proyecto.common.exception.StringNotValidException;
-import com.proyecto.common.exception.StringTooLongException;
+import com.proyecto.common.exception.*;
 
 public class ValidationString {
 
-	// Paso 1. Implementar un mÈtodo est·tico "validLenght"que valide
-	// si una cadena tiene mas tamaÒano de 25 posiciones y menos de 1 posiciÛn
-	// El mÈtodo tiene que devolver void, utilizar excepciones, declarar las
+	// Paso 1. Implementar un mÔøΩtodo estÔøΩtico "validLenght"que valide
+	// si una cadena tiene mas tamaÔøΩano de 25 posiciones y menos de 1 posiciÔøΩn
+	// El mÔøΩtodo tiene que devolver void, utilizar excepciones, declarar las
 	// necesarias
-		// Paso 1.1. Validar si la cadena no es nula y no esta vacÌa
-		// Paso 1.2 Validar si es mayor que el tamaÒo maximo (Constantes)
-		// Paso 1.3 Validar si es menor que el tamaÒo minimo (Constantes)
-		
-		// Paso 1.4 Validar si no contiene palabras no permitidas;
-	
-	
+    public static void validLenght(String str) throws StringNotValidException {
+        // Paso 1.1. Validar si la cadena no es nula y no esta vacÔøΩa
+        if (str == null || str.isEmpty()) {
+            throw new StringNotValidException(CodeErrors.NO_STRING, "La cadena no puede ser nula o vac√≠a.");
+        }
+        // Paso 1.2 Validar si es mayor que el tamaÔøΩo maximo (Constantes)
+        if (str.length() > Constantes.TAMANIO_MAX) {
+            throw new StringTooLongException(CodeErrors.STRING_TOO_LONG, "La cadena excede el tama√±o m√°ximo permitido.");
+        }
+        // Paso 1.3 Validar si es menor que el tamaÔøΩo minimo (Constantes)
+        if( str.length() < Constantes.TAMANIO_MIN) {
+            throw new StringTooShortException(CodeErrors.STRING_TOO_SHORT, "La cadena es menor que el tama√±o m√≠nimo permitido.");
+        }
+        // Paso 1.4 Validar si no contiene palabras no permitidas;
+        for (NotAllowedWord word : NotAllowedWord.values()) {
+            if (str.toLowerCase().contains(word.toString())) {
+                throw new NotAllowedWordsException(CodeErrors.WORD_NOT_ALLOWED_FOUND,
+                        "La cadena contiene una palabra no permitida: " + word.toString(), word);
+            }
+        }
+    }
 
-	// Paso 2: Sobrecargar el mÈtodo anterior para que realize las
-	// validaciones con dos valores m·ximo y mÌnimo pasados por par·metros
-	
-		// Paso 1.1. Validar si la cadena no es nula y no esta vacÌa
-		// Paso 1.2 Validar si es mayor que el tamaÒo maximo (Constantes)
-		// Paso 1.3 Validar si es menor que el tamaÒo minimo (Constantes)
-		// Paso 1.4 Validar si no contiene palabras no permitidas;		
-		
-	
-
-	// Paso 3. Si alguna funcionalidad se repitiese extraerla en un mÈtodo privado
-	
-
+	// Paso 2: Sobrecargar el mÔøΩtodo anterior para que realize las
+	// validaciones con dos valores mÔøΩximo y mÔøΩnimo pasados por parÔøΩmetros
+	public static void validLength(String str, int max, int min) throws StringNotValidException {
+        // Paso 1.1. Validar si la cadena no es nula y no esta vacÔøΩa
+        if (str == null || str.isEmpty()) {
+            throw new StringNotValidException(CodeErrors.NO_STRING, "La cadena no puede ser nula o vac√≠a.");
+        }
+        // Paso 1.2 Validar si es mayor que el tamaÔøΩo maximo (par√°metro)
+        if (str.length() > max) {
+            throw new StringTooLongException(CodeErrors.STRING_TOO_LONG, "La cadena excede el tama√±o m√°ximo permitido.");
+        }
+        // Paso 1.3 Validar si es menor que el tamaÔøΩo minimo (par√°metro)
+        if( str.length() < min) {
+            throw new StringTooShortException(CodeErrors.STRING_TOO_SHORT, "La cadena es menor que el tama√±o m√≠nimo permitido.");
+        }
+        // Paso 1.4 Validar si no contiene palabras no permitidas;
+        for (NotAllowedWord word : NotAllowedWord.values()) {
+            if (str.toLowerCase().contains(word.toString())) {
+                throw new NotAllowedWordsException(CodeErrors.WORD_NOT_ALLOWED_FOUND,
+                        "La cadena contiene una palabra no permitida: " + word.toString(), word);
+            }
+        }
+    }
+	// Paso 3. Si alguna funcionalidad se repitiese extraerla en un mÔøΩtodo privado
 }

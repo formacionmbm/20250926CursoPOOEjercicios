@@ -18,10 +18,30 @@ public class Test {
 			// Paso 1. Realizar un bucle infinito, que �nicamente se pare
 			// cuando el c�digo lance una excepcion de cadena nula o vac�a o 
 			// de palabra no permitida introducida
+		try {
+			while(true) {
+				// Paso 2. Pedir al usuario que introduzca una cadena
+				try {
+				System.out.println("Introduce una cadena:");
+				String input = scanner.nextLine();
+				ValidationString.validLenght(input);
+				System.out.println("Cadena correcta.");
+				} catch (StringTooLongException stle) {
+					System.out.println("Error: La cadena es demasiado larga.");
+				} catch (StringTooShortException stse) {
+					System.out.println("Error: La cadena es demasiado corta.");
+				}
+			}
+		} catch (NotAllowedWordsException nawe) {
+			System.out.println("Error: La cadena contiene una palabra no permitida: " + nawe.getWord());
+		} catch (StringNotValidException snve) {
+			System.out.println("Error: La cadena no puede ser nula o vacía.");
+		} finally {
+			scanner.close();
+        }
 
 
-				
-				// Paso 3. Validar si la cadena es correcta con los valores por defecto
+        // Paso 3. Validar si la cadena es correcta con los valores por defecto
 				// Si no es correcta mostrar al usuario el mensaje adecuado por cada caso
 				// Implementar otro bloque try/catch anidado que solo capture las excepciones
 		        // de tama�o.
