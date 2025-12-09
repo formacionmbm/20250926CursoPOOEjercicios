@@ -1,6 +1,6 @@
 package com.proyecto.common.exception;
 
-public class StringNotValidException  {
+public class StringNotValidException extends Exception {
 	
 	//Paso 1.Indicar atributo protegido de tipo String llamado "code"
 	
