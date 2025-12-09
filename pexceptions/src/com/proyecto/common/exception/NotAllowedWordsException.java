@@ -4,7 +4,12 @@ import com.proyecto.common.NotAllowedWord;
 
 //Paso 1. Identificar esta clase commo hija de StringNotValidException
 public class NotAllowedWordsException extends StringNotValidException {
-
+	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	
 	// Paso 2. Indicar un atributo tipo NotAllowedWord llamado "word"
 	private NotAllowedWord word;
 

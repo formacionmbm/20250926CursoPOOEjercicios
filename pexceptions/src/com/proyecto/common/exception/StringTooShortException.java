@@ -3,6 +3,11 @@ package com.proyecto.common.exception;
 //Paso 1. Identificar esta clase como hija de StringNotValidException
 public class StringTooShortException extends StringNotValidException{
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	
 	// Paso 2. Indicar un atributo inmutable tipo int llamado "tamanyo"
 	private final int tamanyo;
 

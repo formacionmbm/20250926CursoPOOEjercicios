@@ -8,32 +8,108 @@ import com.proyecto.common.exception.CodeErrors;
 import com.proyecto.common.exception.NotAllowedWordsException;
 import com.proyecto.common.exception.StringNotValidException;
 import com.proyecto.common.exception.StringTooLongException;
+import com.proyecto.common.exception.StringTooShortException;
 
 public class ValidationString {
 
-	// Paso 1. Implementar un mÈtodo est·tico "validLenght"que valide
-	// si una cadena tiene mas tamaÒano de 25 posiciones y menos de 1 posiciÛn
-	// El mÈtodo tiene que devolver void, utilizar excepciones, declarar las
+	// Paso 1. Implementar un mÔøΩtodo estÔøΩtico "validLenght"que valide
+	// si una cadena tiene mas tamaÔøΩano de 25 posiciones y menos de 1 posiciÔøΩn
+	// El mÔøΩtodo tiene que devolver void, utilizar excepciones, declarar las
 	// necesarias
-		// Paso 1.1. Validar si la cadena no es nula y no esta vacÌa
-		// Paso 1.2 Validar si es mayor que el tamaÒo maximo (Constantes)
-		// Paso 1.3 Validar si es menor que el tamaÒo minimo (Constantes)
 		
-		// Paso 1.4 Validar si no contiene palabras no permitidas;
-	
+		public static void validLenght(String cadena) throws StringNotValidException{
+			
+			
+			try {
+				
+				// Paso 1.1. Validar si la cadena no es nula y no esta vacÔøΩa
+				validNotNullVoid(cadena);
+				
+				// Paso 1.2 Validar si es mayor que el tamaÔøΩo maximo (Constantes)
+				validLengthMax(cadena, Constantes.TAMANIO_MAX);
+				
+				// Paso 1.3 Validar si es menor que el tamaÔøΩo minimo (Constantes)
+				validLengthMin(cadena, Constantes.TAMANIO_MIN);
+				
+				// Paso 1.4 Validar si no contiene palabras no permitidas;
+				validNotAllowedWord(cadena);
+				
+			} catch (StringNotValidException snve) {
+				
+				System.out.println("Error de validacion de cadena: " + snve.getMessage());
+				
+			} catch (Exception e) {
+				
+				System.out.println("Error general: " + e.getMessage());
+				
+			}
+			
+			
+		}
 	
 
-	// Paso 2: Sobrecargar el mÈtodo anterior para que realize las
-	// validaciones con dos valores m·ximo y mÌnimo pasados por par·metros
+	// Paso 2: Sobrecargar el mÔøΩtodo anterior para que realize las
+	// validaciones con dos valores mÔøΩximo y mÔøΩnimo pasados por parÔøΩmetros
 	
-		// Paso 1.1. Validar si la cadena no es nula y no esta vacÌa
-		// Paso 1.2 Validar si es mayor que el tamaÒo maximo (Constantes)
-		// Paso 1.3 Validar si es menor que el tamaÒo minimo (Constantes)
-		// Paso 1.4 Validar si no contiene palabras no permitidas;		
+		public static void validLenght(String cadena, int max, int min) throws StringNotValidException{
+			
+			
+			try {
+				// Paso 1.1. Validar si la cadena no es nula y no esta vacÔøΩa
+				validNotNullVoid(cadena);
+				
+				// Paso 1.2 Validar si es mayor que el tamaÔøΩo maximo (Constantes)
+				validLengthMax(cadena, max);
+				
+				// Paso 1.3 Validar si es menor que el tamaÔøΩo minimo (Constantes)
+				validLengthMin(cadena, min);
+				
+				// Paso 1.4 Validar si no contiene palabras no permitidas;
+				validNotAllowedWord(cadena);
+				
+			} catch (StringNotValidException snve) {
+				
+				throw snve;
+				
+			} catch (Exception e) {
+				
+				throw e;
+				
+			}
+			
+			
+		}
+
 		
-	
+		// Paso 3. Si alguna funcionalidad se repitiese extraerla en un mÔøΩtodo privado
 
-	// Paso 3. Si alguna funcionalidad se repitiese extraerla en un mÈtodo privado
-	
+		private static void validNotNullVoid(String cadena) throws StringNotValidException {
+			if (cadena == null || cadena.trim().isEmpty()) {
+			    throw new StringNotValidException(CodeErrors.NO_STRING, "Cadena nula o vacia.");
+			}
+		}
+		
+		private static void validLengthMax(String cadena, int max) throws StringTooLongException {
+			if (cadena.length() > max) {
+				throw new StringTooLongException(CodeErrors.STRING_TOO_LONG, "Cadena muy grande", cadena.length()); //no se si es el tama√±o de la cadena o el max
+			}
+		}
+		
+		private static void validLengthMin(String cadena, int min) throws StringTooShortException {
+			if (cadena.length() < min) {
+				throw new StringTooShortException(CodeErrors.STRING_TOO_SHORT, "Cadena muy peque√±a", cadena.length()); //no se si es el tama√±o de la cadena o el min
+			}
+		}
+		
+		private static void validNotAllowedWord(String cadena) throws NotAllowedWordsException {
+			for (NotAllowedWord naw : NotAllowedWord.values()) {
+			    
+			    if (naw.name().equalsIgnoreCase(cadena)) { 
+			    	throw new NotAllowedWordsException(CodeErrors.WORD_NOT_ALLOWED_FOUND, "Cadena no permitida", naw);
+			    }
+			    
+			}
+		}
 
+		
 }
