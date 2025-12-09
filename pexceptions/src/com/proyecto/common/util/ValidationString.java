@@ -19,11 +19,15 @@ public class ValidationString {
         }
         // Paso 1.2 Validar si es mayor que el tama�o maximo (Constantes)
         if (str.length() > Constantes.TAMANIO_MAX) {
-            throw new StringTooLongException(CodeErrors.STRING_TOO_LONG, "La cadena excede el tamaño máximo permitido.");
+            throw new StringTooLongException(CodeErrors.STRING_TOO_LONG,
+                    "La cadena excede el tamaño máximo permitido.",
+                    str.length());
         }
         // Paso 1.3 Validar si es menor que el tama�o minimo (Constantes)
         if( str.length() < Constantes.TAMANIO_MIN) {
-            throw new StringTooShortException(CodeErrors.STRING_TOO_SHORT, "La cadena es menor que el tamaño mínimo permitido.");
+            throw new StringTooShortException(CodeErrors.STRING_TOO_SHORT,
+                    "La cadena es menor que el tamaño mínimo permitido.",
+                    str.length());
         }
         // Paso 1.4 Validar si no contiene palabras no permitidas;
         for (NotAllowedWord word : NotAllowedWord.values()) {
@@ -43,11 +47,15 @@ public class ValidationString {
         }
         // Paso 1.2 Validar si es mayor que el tama�o maximo (parámetro)
         if (str.length() > max) {
-            throw new StringTooLongException(CodeErrors.STRING_TOO_LONG, "La cadena excede el tamaño máximo permitido.");
+            throw new StringTooLongException(CodeErrors.STRING_TOO_LONG,
+                    "La cadena excede el tamaño máximo permitido.",
+                    str.length());
         }
         // Paso 1.3 Validar si es menor que el tama�o minimo (parámetro)
         if( str.length() < min) {
-            throw new StringTooShortException(CodeErrors.STRING_TOO_SHORT, "La cadena es menor que el tamaño mínimo permitido.");
+            throw new StringTooShortException(CodeErrors.STRING_TOO_SHORT,
+                    "La cadena es menor que el tamaño mínimo permitido.",
+                    str.length());
         }
         // Paso 1.4 Validar si no contiene palabras no permitidas;
         for (NotAllowedWord word : NotAllowedWord.values()) {
