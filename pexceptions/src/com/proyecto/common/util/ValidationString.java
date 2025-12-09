@@ -11,29 +11,46 @@ import com.proyecto.common.exception.StringTooLongException;
 
 public class ValidationString {
 
-	// Paso 1. Implementar un método estático "validLenght"que valide
-	// si una cadena tiene mas tamañano de 25 posiciones y menos de 1 posición
-	// El método tiene que devolver void, utilizar excepciones, declarar las
+	// Paso 1. Implementar un mï¿½todo estï¿½tico "validLenght"que valide
+	// si una cadena tiene mas tamaï¿½ano de 25 posiciones y menos de 1 posiciï¿½n
+	// El mï¿½todo tiene que devolver void, utilizar excepciones, declarar las
 	// necesarias
-		// Paso 1.1. Validar si la cadena no es nula y no esta vacía
-		// Paso 1.2 Validar si es mayor que el tamaño maximo (Constantes)
-		// Paso 1.3 Validar si es menor que el tamaño minimo (Constantes)
+	public static void validLenght(String str) throws StringNotValidException {
+		
+	}
+	
+		// Paso 1.1. Validar si la cadena no es nula y no esta vacï¿½a
+	if (str == null || str.isEmpty()) {
+		throw new StringNotValidException(CodeErrors.NO_STRING, "ER_STR001");
+	}
+	
+		// Paso 1.2 Validar si es mayor que el tamaï¿½o maximo (Constantes)
+	if (str.lenght > Constantes.TAMANIO_MAX) {
+		throw new StringNotValidException(CodeErrors.STRING_TOO_LONG, "ER_STR002");
+	}
+	
+		// Paso 1.3 Validar si es menor que el tamaï¿½o minimo (Constantes)
+	if (str.lenght < Constantes.TAMANIO_MIN) {
+		throw new StringNotValidException(CodeErrors.STRING_TOO_SHORT, "ER_STR003");
+	}
 		
 		// Paso 1.4 Validar si no contiene palabras no permitidas;
-	
+	if (str.contains(NotAllowedWord)) {
+		throw new StringNotValidException(CodeErrors.WORD_NOT_ALLOWED_FOUND, "ER_STR004");
+	}
 	
 
-	// Paso 2: Sobrecargar el método anterior para que realize las
-	// validaciones con dos valores máximo y mínimo pasados por parámetros
+	// Paso 2: Sobrecargar el mï¿½todo anterior para que realize las
+	// validaciones con dos valores mï¿½ximo y mï¿½nimo pasados por parï¿½metros
 	
-		// Paso 1.1. Validar si la cadena no es nula y no esta vacía
-		// Paso 1.2 Validar si es mayor que el tamaño maximo (Constantes)
-		// Paso 1.3 Validar si es menor que el tamaño minimo (Constantes)
+		// Paso 1.1. Validar si la cadena no es nula y no esta vacï¿½a
+		// Paso 1.2 Validar si es mayor que el tamaï¿½o maximo (Constantes)
+		// Paso 1.3 Validar si es menor que el tamaï¿½o minimo (Constantes)
 		// Paso 1.4 Validar si no contiene palabras no permitidas;		
 		
 	
 
-	// Paso 3. Si alguna funcionalidad se repitiese extraerla en un método privado
+	// Paso 3. Si alguna funcionalidad se repitiese extraerla en un mï¿½todo privado
 	
 
 }
