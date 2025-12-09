@@ -8,9 +8,9 @@ public class StringNotValidException extends Exception {
 	//Paso 2. Implementar un contructor, que tenga por parametro un valor para code
 	// y un mensaje para el constructor del padre
 
-	public StringNotValidException(String code) {
+	public StringNotValidException(String code, String msg) {
+		super(msg);
 		this.code = code;
-		System.out.println("Esto es el constructor padre");
 	}
 	
 
