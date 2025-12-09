@@ -21,7 +21,7 @@ public class ValidationString {
 		
 		// Paso 1.4 Validar si no contiene palabras no permitidas;
 	
-	public static void validLength(String texto) throws Exception {
+	public static void validLength(String cadena) throws StringNotValidException {
         
     }
 

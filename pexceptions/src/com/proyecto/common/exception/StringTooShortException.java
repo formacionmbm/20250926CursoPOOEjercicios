@@ -10,8 +10,8 @@ public class StringTooShortException extends StringNotValidException{
 	// Paso 3. Implementar el constructor adecuado para asignar valor a todos
 	// los atributos de esta clase incluidos los heredados
 	
-	public StringTooShortException(String code, int tamanyo) {
-		super(code);
+	public StringTooShortException(String code, String msg, int tamanyo) {
+		super(code, msg);
 		this.tamanyo = tamanyo;
 	}
 
