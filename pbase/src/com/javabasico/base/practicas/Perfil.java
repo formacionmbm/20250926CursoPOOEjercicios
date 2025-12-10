@@ -9,12 +9,21 @@ public class Perfil implements Serializable{
 	// Construir un Bean Perfil, que tenga como atributos  el identificador  y el nombre
 	private int id;
 	private String nombre;
+<<<<<<< HEAD
 	
+=======
+>>>>>>> refs/heads/solucion
 	
 	//Constructor defecto
+<<<<<<< HEAD
 	public Perfil() {
 		
 	}
+=======
+	public Perfil() {}
+
+	
+>>>>>>> refs/heads/solucion
 	
 	//Getter//setter
 	public long getId() {
@@ -24,6 +33,7 @@ public class Perfil implements Serializable{
 		this.id = id;
 	}
 	
+<<<<<<< HEAD
 	public String getNombre() {
 		return nombre;
 	}
@@ -37,6 +47,30 @@ public class Perfil implements Serializable{
 		return "Perfil [id=" + id + ", nombre=" + nombre + "]";
 	}
 	
+=======
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+
+
+	@Override
+	public String toString() {
+		return "Perfil [id=" + id + ", nombre=" + nombre + "]";
+	}
+>>>>>>> refs/heads/solucion
 	
 	
 	

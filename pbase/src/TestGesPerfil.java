@@ -40,12 +40,7 @@ public class TestGesPerfil {
 		
 		System.out.println("Lista de perfiles:"+perfiles);
 		
-		//System.out.println(servicio.findById(1));  /* Buscar un registro */
 		
-		//Modificar un registro
-		perfilAux.setNombre("Vic");		
-		servicio.save(perfilAux);
-		System.out.println("Lista de perfiles:"+perfiles);
 		
 	}
 }
