@@ -15,7 +15,9 @@ public class Test {
 		// Declarar las variables necesarias		
 		String palabra = "";
 		Scanner sc = new Scanner(System.in);
-			
+		
+		System.out.println(" --- INICIO DEL PROGRAMA ---\n");
+		
 		try {
 			
 			// Paso 1. Realizar un bucle infinito, que �nicamente se pare
@@ -26,7 +28,7 @@ public class Test {
 				// Paso 2. Pedir una cadena por consola al usuario
 				palabra = "";
 				System.out.println("Ingrese una palabra: ");
-				palabra = sc.next();
+				palabra = sc.nextLine();
 				
 				// Paso 3. Validar si la cadena es correcta con los valores por defecto
 				// Si no es correcta mostrar al usuario el mensaje adecuado por cada caso
@@ -37,12 +39,12 @@ public class Test {
 					ValidationString.validLenght(palabra);
 					
 					// Paso 3.1. Se muestra un mensaje de cadena v�lida
-					System.out.println("Cadena valida: " + palabra);
+					System.out.println("Cadena valida: " + palabra + "\n");
 					
 				} catch (StringTooLongException stle) {
-					System.out.println("Error de validacion de tamaño de la cadena: " + stle.getMessage());
+					System.out.println("Error de validacion de tamaño de la cadena: " + stle.getMessage() + ". Caracteres ingresados: " + stle.getTamanyo());
 				} catch (StringTooShortException stse) {
-					System.out.println("Error de validacion de tamaño de la cadena: " + stse.getMessage());
+					System.out.println("Error de validacion de tamaño de la cadena: " + stse.getMessage() + ". Caracteres ingresados: " + stse.getTamanyo());
 				} catch (StringNotValidException e) {
 					throw e;
 				}
@@ -62,23 +64,9 @@ public class Test {
 			System.out.println("Error general: " + e.getMessage());
 			
 		}
+					
+		System.out.println(" --- FIN DEL PROGRAMA --- ");
 		
-		
-			// Paso 1. Realizar un bucle infinito, que �nicamente se pare
-			// cuando el c�digo lance una excepcion de cadena nula o vac�a o 
-			// de palabra no permitida introducida
-				// Paso 2. Pedir una cadena por consola al usuario
-				
-				// Paso 3. Validar si la cadena es correcta con los valores por defecto
-				// Si no es correcta mostrar al usuario el mensaje adecuado por cada caso
-				// Implementar otro bloque try/catch anidado que solo capture las excepciones
-		        // de tama�o.
-						
-						// Paso 3.1. Se muestra un mensaje de cadena v�lida
-		//Paso 4. Cuando se recojan todas las excepciones (de ambos bloques try/cach)
-		//mostrar un mensaje adecuado a la  excepci�n recogida				
-			
-											
 	}			
 	
 

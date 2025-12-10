@@ -102,13 +102,18 @@ public class ValidationString {
 		}
 		
 		private static void validNotAllowedWord(String cadena) throws NotAllowedWordsException {
-			for (NotAllowedWord naw : NotAllowedWord.values()) {
-			    
-			    if (naw.name().equalsIgnoreCase(cadena)) { 
-			    	throw new NotAllowedWordsException(CodeErrors.WORD_NOT_ALLOWED_FOUND, "Cadena no permitida", naw);
-			    }
-			    
-			}
+			
+			String textoMinuscula = cadena.toLowerCase();
+		    
+		    for (NotAllowedWord naw : NotAllowedWord.values()) {
+		        
+		        if (textoMinuscula.contains(naw.name().toLowerCase())) {
+		            
+		        	throw new NotAllowedWordsException(CodeErrors.WORD_NOT_ALLOWED_FOUND, "Cadena no permitida", naw);
+		        	
+		        }
+		    }
+			
 		}
 
 		
