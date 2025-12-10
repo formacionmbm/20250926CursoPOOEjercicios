@@ -10,27 +10,46 @@ import com.proyecto.common.util.ValidationString;
 
 public class Test {
 
-	// Todo el código excepto las declaraciones debe estar en un bloque try-catch
-	public static void main(String[] args)  {
-		// Declarar las variables necesarias		
-		
-			
-			// Paso 1. Realizar un bucle infinito, que únicamente se pare
-			// cuando el código lance una excepcion de cadena nula o vacía o 
+	// Todo el cï¿½digo excepto las declaraciones debe estar en un bloque try-catch
+	public static void main(String[] args) {
+		// Declarar las variables necesarias
+		String cadena;
+
+		try (Scanner sc=new Scanner(System.in)){
+			// Paso 1. Realizar un bucle infinito, que ï¿½nicamente se pare
+			// cuando el cï¿½digo lance una excepcion de cadena nula o vacï¿½a o
 			// de palabra no permitida introducida
+			while (true) {
 				// Paso 2. Pedir una cadena por consola al usuario
+				System.out.println("Dame cadena: ");
+				cadena = sc.nextLine();
 				
 				// Paso 3. Validar si la cadena es correcta con los valores por defecto
 				// Si no es correcta mostrar al usuario el mensaje adecuado por cada caso
 				// Implementar otro bloque try/catch anidado que solo capture las excepciones
-		        // de tamaño.
-						
-						// Paso 3.1. Se muestra un mensaje de cadena válida
-		//Paso 4. Cuando se recojan todas las excepciones (de ambos bloques try/cach)
-		//mostrar un mensaje adecuado a la  excepción recogida				
-			
-											
-	}			
-	
+				// de tamaï¿½o.
+				try {
+					
+					ValidationString.validLenght(cadena);
+					// Paso 3.1. Se muestra un mensaje de cadena vï¿½lida
+					System.out.println("La cadena es valida");
+					
+				}catch(StringTooLongException stle) {
+					System.out.println(stle.getMessage());
+				}catch(StringTooShortException stse) {
+					System.out.println(stse.getMessage());
+				}
+			}
+
+
+			// Paso 4. Cuando se recojan todas las excepciones (de ambos bloques try/cach)
+			// mostrar un mensaje adecuado a la excepciï¿½n recogida
+		} catch (NotAllowedWordsException nawe) {
+			System.out.println(nawe.getMessage());
+		} catch (StringNotValidException snve) {
+			System.out.println(snve.getMessage());
+		}
+
+	}
 
 }

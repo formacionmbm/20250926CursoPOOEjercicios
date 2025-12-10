@@ -1,7 +1,5 @@
 package com.proyecto.common.util;
 
-import java.util.Arrays;
-
 import com.proyecto.common.Constantes;
 import com.proyecto.common.NotAllowedWord;
 import com.proyecto.common.exception.CodeErrors;
