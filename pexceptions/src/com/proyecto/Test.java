@@ -45,6 +45,8 @@ public class Test {
 					System.out.println("Error de validacion de tamaño de la cadena: " + stle.getMessage() + ". Caracteres ingresados: " + stle.getTamanyo());
 				} catch (StringTooShortException stse) {
 					System.out.println("Error de validacion de tamaño de la cadena: " + stse.getMessage() + ". Caracteres ingresados: " + stse.getTamanyo());
+				} catch (NotAllowedWordsException nawe) {
+					throw nawe;
 				} catch (StringNotValidException e) {
 					throw e;
 				}
@@ -55,6 +57,10 @@ public class Test {
 			
 		//Paso 4. Cuando se recojan todas las excepciones (de ambos bloques try/cach)
 		//mostrar un mensaje adecuado a la  excepci�n recogida	
+		} catch (NotAllowedWordsException nawe) {
+			
+			System.out.println("Error de validacion de cadena: " + nawe.getMessage() + ". Palabra invalida ingresada: " + nawe.getWord().name());
+			
 		} catch (StringNotValidException snve) {
 			
 			System.out.println("Error de validacion de cadena: " + snve.getMessage());

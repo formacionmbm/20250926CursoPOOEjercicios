@@ -19,31 +19,17 @@ public class ValidationString {
 		
 		public static void validLenght(String cadena) throws StringNotValidException{
 			
+			// Paso 1.1. Validar si la cadena no es nula y no esta vac�a
+			validNotNullVoid(cadena);
 			
-			try {
-				
-				// Paso 1.1. Validar si la cadena no es nula y no esta vac�a
-				validNotNullVoid(cadena);
-				
-				// Paso 1.2 Validar si es mayor que el tama�o maximo (Constantes)
-				validLengthMax(cadena, Constantes.TAMANIO_MAX);
-				
-				// Paso 1.3 Validar si es menor que el tama�o minimo (Constantes)
-				validLengthMin(cadena, Constantes.TAMANIO_MIN);
-				
-				// Paso 1.4 Validar si no contiene palabras no permitidas;
-				validNotAllowedWord(cadena);
-				
-			} catch (StringNotValidException snve) {
-				
-				throw snve;
-				
-			} catch (Exception e) {
-				
-				throw e;
-				
-			}
+			// Paso 1.2 Validar si es mayor que el tama�o maximo (Constantes)
+			validLengthMax(cadena, Constantes.TAMANIO_MAX);
 			
+			// Paso 1.3 Validar si es menor que el tama�o minimo (Constantes)
+			validLengthMin(cadena, Constantes.TAMANIO_MIN);
+			
+			// Paso 1.4 Validar si no contiene palabras no permitidas;
+			validNotAllowedWord(cadena);
 			
 		}
 	
@@ -53,30 +39,17 @@ public class ValidationString {
 	
 		public static void validLenght(String cadena, int max, int min) throws StringNotValidException{
 			
+			// Paso 1.1. Validar si la cadena no es nula y no esta vac�a
+			validNotNullVoid(cadena);
 			
-			try {
-				// Paso 1.1. Validar si la cadena no es nula y no esta vac�a
-				validNotNullVoid(cadena);
-				
-				// Paso 1.2 Validar si es mayor que el tama�o maximo (Constantes)
-				validLengthMax(cadena, max);
-				
-				// Paso 1.3 Validar si es menor que el tama�o minimo (Constantes)
-				validLengthMin(cadena, min);
-				
-				// Paso 1.4 Validar si no contiene palabras no permitidas;
-				validNotAllowedWord(cadena);
-				
-			} catch (StringNotValidException snve) {
-				
-				throw snve;
-				
-			} catch (Exception e) {
-				
-				throw e;
-				
-			}
+			// Paso 1.2 Validar si es mayor que el tama�o maximo (Constantes)
+			validLengthMax(cadena, max);
 			
+			// Paso 1.3 Validar si es menor que el tama�o minimo (Constantes)
+			validLengthMin(cadena, min);
+			
+			// Paso 1.4 Validar si no contiene palabras no permitidas;
+			validNotAllowedWord(cadena);
 			
 		}
 
