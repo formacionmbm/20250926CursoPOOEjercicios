@@ -14,6 +14,18 @@ public class Ejercicio03 {
 		Scanner sc=new Scanner(System.in);
 		List<Integer> lista=generarLista();
 		
+		System.out.println("Dame un elemento: ");
+		int num = sc.nextInt();
+		boolean verificar = false;
+		for (int dato:lista) {
+			if (dato == num) {
+				verificar = true;
+			}
+				
+		}
+		String respuesta = verificar ? "El elemento si esta en la lista!" : "El elemento no exite en la lista";
+		System.out.println(respuesta);
+		
 		sc.close();
 
 	}

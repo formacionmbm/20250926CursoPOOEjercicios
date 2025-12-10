@@ -6,12 +6,18 @@ import java.util.List;
 public class Ejercicio02 {
 /**
  * 
- * Con la lista dada, obtener el tamaño de una lista y al primer y último elemento
+ * Con la lista dada, obtener el tamaï¿½o de una lista y al primer y ï¿½ltimo elemento
  * Mostrarlos con un syso
  */
 	public static void main(String[] args) {
 		List<Integer> lista=generarLista();
+		int tamanio = lista.size();
+		int primero = lista.getFirst();
+		int ultimo = lista.getLast();
 		
+		System.out.println("TamaÃ±o lista: " + tamanio + "\n" +
+							"Primer elemento: " + primero + "\n" +
+							"Ultimo elemento: " + ultimo);
 
 	}
 	

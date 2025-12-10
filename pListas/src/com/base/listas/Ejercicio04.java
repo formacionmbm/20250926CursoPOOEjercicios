@@ -22,7 +22,7 @@ public class Ejercicio04 {
 		Integer numero; //cambiarlo a integer;
 		//Eliminaci�n por numero. El tipo es Integer
 		
-		
+	
 		
 		sc.close();
 
