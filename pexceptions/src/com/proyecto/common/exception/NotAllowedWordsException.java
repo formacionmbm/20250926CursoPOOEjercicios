@@ -6,11 +6,19 @@ import com.proyecto.common.NotAllowedWord;
 public class NotAllowedWordsException extends StringNotValidException {
 
 	// Paso 2. Indicar un atributo tipo NotAllowedWord llamado "word"
+	String word;
 	
 	//Paso 3. Implementar un constructor que tenga los parametros  necesarios 
 	// para invocar al constructor padre y asignar/establecer el valor de word.
+	public NotAllowedWordsException(String code, String word) {
+		super(code, word);
+		this.word = word;
+	}
 
-	//Paso 4. Implementar el método get para devolver el valor de word
-	
+
+	//Paso 4. Implementar el mï¿½todo get para devolver el valor de word
+	public String getWord() {
+		return word;
+	}
 	
 }
