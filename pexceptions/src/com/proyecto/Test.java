@@ -14,11 +14,11 @@ public class Test {
 	public static void main(String[] args)  {
 		// Declarar las variables necesarias		
 		String palabra = "";
-		Scanner sc = new Scanner(System.in);
+		
 		
 		System.out.println(" --- INICIO DEL PROGRAMA ---\n");
 		
-		try {
+		try (Scanner sc = new Scanner(System.in)){
 			
 			// Paso 1. Realizar un bucle infinito, que �nicamente se pare
 			// cuando el c�digo lance una excepcion de cadena nula o vac�a o 
@@ -45,11 +45,7 @@ public class Test {
 					System.out.println("Error de validacion de tamaño de la cadena: " + stle.getMessage() + ". Caracteres ingresados: " + stle.getTamanyo());
 				} catch (StringTooShortException stse) {
 					System.out.println("Error de validacion de tamaño de la cadena: " + stse.getMessage() + ". Caracteres ingresados: " + stse.getTamanyo());
-				} catch (NotAllowedWordsException nawe) {
-					throw nawe;
-				} catch (StringNotValidException e) {
-					throw e;
-				}
+				} 
 				
 				
 			}
