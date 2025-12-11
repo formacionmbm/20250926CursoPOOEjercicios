@@ -5,12 +5,15 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Ejercicio01 {
+	
+	
 /**
  * 
  * Crear una lista de enteros y agregar 5 elementos.
  * Mostrarlos con un syso
  */
 	public static void main(String[] args) {
+		
 		
 		List<Integer> enteros = new ArrayList<>(); 
 		
@@ -23,5 +26,6 @@ public class Ejercicio01 {
 		System.out.println(enteros);
 
 	}
+
 
 }

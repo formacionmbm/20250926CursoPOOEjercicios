@@ -1,9 +1,10 @@
 package com.base.listas;
 
 import java.util.ArrayList;
+
 import java.util.Collections;
 import java.util.List;
-import java.util.Scanner;
+
 
 public class Ejercicio07 {
 /**
@@ -15,7 +16,11 @@ public class Ejercicio07 {
 	public static void main(String[] args) {
 		List<Integer> lista=generarLista();
 		
+		Collections.sort(lista);
+		System.out.println("Lista ordenada: " + lista);
 		
+		Collections.sort(lista.reversed());
+		System.out.println("Lista ordenada a la inversa: " + lista);
 
 	}
 	

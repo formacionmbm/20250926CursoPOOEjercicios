@@ -17,7 +17,11 @@ public class Ejercicio08 {
 	public static void main(String[] args) {
 		List<Integer> lista=generarLista();
 		
+		Set<Integer> set = new HashSet<>(lista); // Set (HasSet) es una Lista pero que no hazmite duplicados
 		
+		lista = new ArrayList<>(set);
+		
+		System.out.println(lista);
 
 	}
 	

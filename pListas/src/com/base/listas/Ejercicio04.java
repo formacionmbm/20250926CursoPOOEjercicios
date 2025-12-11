@@ -17,11 +17,18 @@ public class Ejercicio04 {
 		List<Integer> lista=generarLista();
 		System.out.println("Introducir un entero:");
 		int indice;//recoger un entero;
+		indice = sc.nextInt();
 		//Eliminaci�n por indice. El tipo es int
+		lista.remove(indice);
+		System.out.println(lista);
 		
-		Integer numero; //cambiarlo a integer;
+		
+		 //cambiarlo a integer;
+		System.out.println("Introducir otro entero:");
+		indice = sc.nextInt();
+		lista.remove(Integer.valueOf(indice));
 		//Eliminaci�n por numero. El tipo es Integer
-		
+		System.out.println(lista);
 	
 		
 		sc.close();

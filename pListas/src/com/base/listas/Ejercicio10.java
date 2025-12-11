@@ -18,6 +18,7 @@ public class Ejercicio10 {
 		List<Casa> lista=generarLista();
 		Casa casa =new Casa(110,"XXXXX");
 		
+		System.out.println("El indice que ocupa la nueva casa es: " + lista.indexOf(casa));
 		
 
 	}
@@ -50,7 +51,7 @@ public class Ejercicio10 {
 		return result;
 	}
 
-	@Override
+	/*	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
 			return true;
@@ -67,7 +68,7 @@ public class Ejercicio10 {
 		if (tamanio != other.tamanio)
 			return false;
 		return true;
-	}
+	}*/
 	   
 	   //equals
 	   

@@ -15,8 +15,13 @@ public class Ejercicio05 {
 	public static void main(String[] args) {
 		List<Integer> lista=generarLista();
 		
+		System.out.println(lista);
 		
+		lista.clear();
+		
+		if (lista.isEmpty()) System.out.println("La lista esta vacia");
 
+		System.out.println(lista);
 	}
 	
 	public static List<Integer> generarLista(){
